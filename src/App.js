@@ -1,13 +1,26 @@
 import ItemListContainer from "./components/ItemListConainer/ItemListContainer";
+import 'boxicons'
 import NavBar from "./components/NavBar/NavBar";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import TransitionsModal from "./components/modal/modal";
+
+
+
+
+
 function App() {
-  return (
-    <div className="App">
-      <NavBar/>
-      <ItemListContainer  greeting={'Bienvenidos a mi ecommerce'}  />
-    </div>
-  );
+return (
+<>
+
+<NavBar/>
+<ItemListContainer  greeting={'Bienvenidos a mi ecommerce'}  />
+
+<TransitionsModal/>
+
+
+
+</>
+
+);
 }
 
 export default App;
