@@ -1,7 +1,5 @@
 import React from 'react'
 import FirstSection from '../FirstSection/FirstSection'
-import ItemListContainer from '../ItemListConainer/ItemListContainer'
-import ItemCount from '../ItemCount/ItemCount'
 import smartWach from '../img/zyro-image.png'
 
 const Home = () => {
