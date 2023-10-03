@@ -1,0 +1,44 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+   
+   
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    background-color: #333; /* Negro o gris oscuro */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .button-decrement {
+    background-color: #555; /* Un tono más claro de gris */
+  }
+  
+  .button-increment {
+    background-color: #555; /* Un tono más claro de gris */
+  }
+  
+  .button-add-to-cart {
+    background-color: #333; /* Negro o gris oscuro */
+    
+  }
+  
+  .number {
+    font-size: 28px;
+    color: #333; /* Negro o gris oscuro */
+    margin: 0 10px;
+  }

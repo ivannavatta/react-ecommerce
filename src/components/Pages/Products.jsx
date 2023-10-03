@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount'
 const Products = () => {
   return (
     <>
-    <div>holaaaaaaaa</div>
+    <div><h1 className='title-products'>Products</h1></div>
     <ItemListContainer/>
     <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('cantidad agregada', quantity)}/>
     </>

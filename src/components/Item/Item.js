@@ -1,14 +1,17 @@
 import React from 'react'
 import './Item.css'
+
 const Item = ({ id, name, img, price, stock }) => {
   return (
     
 
-    
-    <article className='card-container' >
+    <div className='center-contain'>
+
+<article className='card-container' >
         <header className='header' >
             <h2 className='item-name' >
                 {name}
+                
             </h2>
         </header>
         <img src={img} alt={name} className='item-img' />
@@ -25,6 +28,9 @@ const Item = ({ id, name, img, price, stock }) => {
         </footer>
 
     </article>
+
+    </div>
+    
     
   )
 }
