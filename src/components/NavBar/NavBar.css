@@ -1,18 +1,58 @@
-nav .flex-ul{
+
+
+
+.navbar {
+    background-color: transparent;
+    color: #000;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-nav .flex-ul a{
-    text-decoration: none;
-}
-nav .flex-ul li{
-    
-    list-style-type: none;
-    color: black;
+    padding: 20px;
 }
 
-nav .flex-ul li:hover{
-    color: red;
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centrar los elementos li horizontalmente */
+    flex-grow: 1; /* Ocupar todo el espacio restante en la barra de navegación */
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #000;
+}
+
+.Sign-Up{
+    display: flex;
+    align-items: center;
+}
+.Sign-Up  li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.Sign-Up  a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.Sign-Up a:hover{
+    border-bottom: 2px solid #000;
+}
+.logo{
+    width: 200px;
+    
 }

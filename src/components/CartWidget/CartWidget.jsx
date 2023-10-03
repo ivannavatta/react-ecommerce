@@ -1,9 +1,12 @@
-import Cart from './assets/bag.png'
+
 import '../CartWidget/CartWidget.css'
+
+import { BiSolidShoppingBag } from "react-icons/bi";
 const CartWidget = () => {
   return (
     <div>
-      <img src={Cart}alt="" className='img-cart' />
+      
+      <i className='img-cart'><BiSolidShoppingBag/></i>
       0
     </div>
   )
