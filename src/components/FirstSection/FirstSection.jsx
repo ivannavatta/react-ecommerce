@@ -1,6 +1,6 @@
 import React from 'react'
-import './FirstSection.css'
-import smartWach from '../img/zyro-image.png'
+import '../steelheets/FirstSection.css'
+
 const FirstSection = () => {
 return (
     <>
@@ -10,7 +10,7 @@ return (
   <h2>"Elegance is found in every wrists embrace."</h2>
   </div>
     </div>
-    <img src={smartWach}  className="smart-watch"/>
+    <img src='../img/zyro-image.png' alt='smartWatch'  className="smart-watch"/>
     <div className='center-container'>
     <div className='container'>
     <header className='Header-section1'>
@@ -19,7 +19,7 @@ return (
     </header>
         
     <footer className='center-botton'>
-    <a href="" className='button-smart-watch'>
+    <a href="/" className='button-smart-watch'>
     show more
     </a>
     </footer>

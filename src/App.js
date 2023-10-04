@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import AboutUs from "./components/Pages/AboutUs";
 import Home from "./components/Pages/Home";
 import Products from "./components/Pages/Products";
-import ItemDetails from "./components/ItemDetails/ItemDetails";
+
+
 
 function App() {
 return (
@@ -19,7 +20,7 @@ return (
   <Routes>
   <Route path='/' element={<Home/>} />
     <Route path='/products' element={<Products/>} />
-    <Route path='/products:itemId' element={<ItemDetails/>} />
+    
     <Route path='/aboutus' element={<AboutUs/>} />
 
   </Routes>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './NavBar.css'
+import '../steelheets/NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import Logo from './assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
@@ -24,7 +24,7 @@ const NavBar = () => {
       </ul>
       <div className='Sign-Up'>
       <ul>
-        <li><a href="">Sign Up</a></li>
+        <li><a href="/">Sign Up</a></li>
       </ul>
 
       <CartWidget/>

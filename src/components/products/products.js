@@ -1,4 +1,4 @@
-const Products = [
+export const products = [
     {
         id: 1,
         name: 'Apple watch',
@@ -24,17 +24,28 @@ const Products = [
         name: 'Amazfit watch',
         price : 450,
         category: 'amazon',
-        img: '../img/amazfit watch.webp',
+        img: '../img/amazfit watch.png',
         stock: 20,
         description: 'amazfit gts 4'
 
     }
 ]
 
-export const getProducts = () =>{
+export const getData = () =>{
+    return new Promise((resolve) => {
+        setTimeout(()=>{
+            resolve(products)
+        },3000)
+    })
+} 
+
+export const getIdData = (productsId) =>{
     return new Promise((resolve) => {
         setTimeout(() =>{
-            resolve(Products)
-        },2000)
+            const product = products.find(prod => prod.id === productsId)
+            resolve(product || null)
+
+        },5000)
     })
 }
+    
