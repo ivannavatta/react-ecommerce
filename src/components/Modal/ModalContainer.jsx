@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { getIdData } from '../Products/Products'
 import ModalList from './ModalList'
-const ModalContainer = () => {
+const ModalContainer = ({isOpen, onClose, id}) => {
     const [modal, setModal] = useState(null)
     const [isLoading, setIsLoading] = useState(true);
     useEffect(()=>{
-        getIdData(3)
+        getIdData(id)
         .then((res) => {
             if (res !== null) {
               setModal(res);
@@ -21,7 +21,7 @@ const ModalContainer = () => {
     console.log('Modal data:', modal)
   return (
     
-    <div>{!isLoading && modal && <ModalList {...modal} />}</div>
+    <div>{!isLoading && modal && <ModalList isOpen={isOpen} onClose={onClose} {...modal} />}</div>
   )
 }
 

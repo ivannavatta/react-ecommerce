@@ -45,7 +45,7 @@ export const getIdData = (productsId) =>{
             const product = products.find(prod => prod.id === productsId)
             resolve(product || null)
 
-        },5000)
+        },)
     })
 }
     

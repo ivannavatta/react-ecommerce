@@ -45,8 +45,8 @@ const ModalList = ({isOpen, onClose, name, price, description, stock, img}) => {
             <h1 style={{ fontSize: '24px', marginTop: '2rem' }}> Title:{name} </h1>
         </header>
         
-        <div style={{ width: '60%', borderRadius: '10px', overflow: 'hidden' }}>
-          <img src={img} alt={name} style={{ width: '100%', objectFit: 'cover' }} />
+        <div style={{ width: '100%', borderRadius: '10px', overflow: 'hidden' }}>
+          <img src={img} alt={name} style={{ width: '40%', objectFit: 'cover' }} />
         </div>
         <p style={{ marginTop: '10px', fontSize: '16px' }}>Description: {description} </p>
         <p style={{ fontSize: '20px', fontWeight: 'bold' }}>Price: $ {price} </p>
@@ -66,9 +66,10 @@ const ModalList = ({isOpen, onClose, name, price, description, stock, img}) => {
             cursor: 'pointer',
             marginTop: '10px',
             }} onClick={onClose} >Close</button>
+             {console.log('name', name)}
         </footer>
       </div> 
-      {console.log(name)}
+     
      </div>
    
   )

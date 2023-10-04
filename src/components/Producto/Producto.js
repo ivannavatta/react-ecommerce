@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../steelheets/Producto.css';
-
-import ModalList from '../Modal/ModalList';
+import ModalContainer from '../Modal/ModalContainer';
 
 
 
@@ -33,7 +32,7 @@ const Producto = ({ id, name, img, price, stock }) => {
           <button className='btn-viewDetails' onClick={openModal}>
             view details
           </button>
-          <ModalList isOpen={isModalOpen} onClose={closeModal} />
+          <ModalContainer isOpen={isModalOpen} onClose={closeModal} id={id}/>
           
           
         </footer>
@@ -42,4 +41,4 @@ const Producto = ({ id, name, img, price, stock }) => {
   );
 };
 
-export default Producto;
+export default Producto;
