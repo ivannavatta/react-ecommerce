@@ -1,44 +1,38 @@
+
+.center{
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
 .counter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-   
-   
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #6a6a6a 1px solid;
+  border-radius: 3rem;
+  overflow: hidden;
+  width: 120px;
+  height: 40px;
   
-  .controls {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
   
+  }
+ 
   .button {
-    background-color: #333; /* Negro o gris oscuro */
-    color: #fff; /* Texto blanco */
-    border: none;
-    border-radius: 5px;
-    font-size: 24px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  .button-decrement {
-    background-color: #555; /* Un tono más claro de gris */
-  }
-  
-  .button-increment {
-    background-color: #555; /* Un tono más claro de gris */
-  }
-  
-  .button-add-to-cart {
-    background-color: #333; /* Negro o gris oscuro */
+   
+    background: transparent;
+    color: #6a6a6a;
+    margin: 0 20px;
+    
     
   }
+  .button p {
   
-  .number {
-    font-size: 28px;
-    color: #333; /* Negro o gris oscuro */
-    margin: 0 10px;
+    font-size: 2rem;
   }
+  
+
+  
+  
+  
+ 

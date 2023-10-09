@@ -10,7 +10,9 @@ return (
   <h2>"Elegance is found in every wrists embrace."</h2>
   </div>
     </div>
+    
     <img src='../img/zyro-image.png' alt='smartWatch'  className="smart-watch"/>
+   
     <div className='center-container'>
     <div className='container'>
     <header className='Header-section1'>

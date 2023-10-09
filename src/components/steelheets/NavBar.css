@@ -3,8 +3,7 @@
 
 .navbar {
     background: transparent;
-    /* background-size: 400% 400%;
-  position: relative; */
+   
     color: #000;
     display: flex;
     justify-content: space-between;
@@ -18,8 +17,8 @@
     display: flex;
     margin: 0;
     padding: 0;
-    justify-content: center; /* Centrar los elementos li horizontalmente */
-    flex-grow: 1; /* Ocupar todo el espacio restante en la barra de navegación */
+    justify-content: center; 
+    flex-grow: 1; 
 }
 
 .nav-links li {

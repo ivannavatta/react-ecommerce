@@ -2,6 +2,7 @@ import React from 'react'
 import '../steelheets/ItemList.css'
 import ProductosContainer from '../Producto/ProductosContainer'
 import ModalContainer from '../Modal/ModalContainer'
+import ProductsDetailsContainer from '../ProductsDetails/ProductsDetailsContainer'
 
 
 
@@ -18,6 +19,7 @@ const Products = () => {
    
     <ProductosContainer/>
       <ModalContainer/> 
+     <ProductsDetailsContainer/>
      
      
     

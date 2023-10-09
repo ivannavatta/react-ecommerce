@@ -1,31 +1,122 @@
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Asegura que el modal esté en la parte superior */
+
+.div-center-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+  
 }
 
-/* Estilos para el modal */
-.modal {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
+.div-container {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 450px;
+   height: 600px;
+   word-wrap: break-word;
+   
 }
 
-/* Estilos para el botón de cerrar */
-.modal button {
-  background: #333;
-  color: #fff;
+ 
+
+.header-modal{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; 
+    z-index: 1;
+}
+.close-button:hover{
+  color: red;
+}
+
+.h1-title {
+   font-size: 24px; 
+   
+}
+
+
+
+.img-style {
+   width: 200px; 
+   height: 200px;
+   object-fit: cover; 
+}
+
+.info-description{
+   margin-top: 20px; 
+   font-size: 16px; 
+   word-wrap: break-word;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.info-price {
+   margin-top: 20px; 
+   font-size: 20px; 
+   font-weight:bold; 
+}
+
+.info-stock {
+   margin-top: 20px; 
+   font-size:16px; 
+   margin-bottom:20px; 
+}
+
+.footer-modal {
+   border-top :1px solid #ccc; 
+   padding-top :10px; 
+   margin-top :10px; 
+   display :flex; 
+   justify-content :flex-end; 
+   align-items :center; 
+   padding-right :20px;  
+   
+}
+
+.close-button-footer {
+  background: transparent;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  color: red;
+  font-size: 1rem;
   cursor: pointer;
+  transition: color 0.3s, background-color 0.3s ;
+  padding: 10px 20px;
+ border-radius: 12px;
 }
+
+.close-button-footer:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-radius: 12px; 
+}
+.comprar-button-footer {
+  background: #333;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-left: 10px; 
+}
+

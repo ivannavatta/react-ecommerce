@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../steelheets/ItemCount.css'
-const ItemCount = ({ stock, initial, onAdd}) => {
+export const ItemCount = ({ stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(initial)
 
     const increment = () => {
@@ -15,17 +15,17 @@ const ItemCount = ({ stock, initial, onAdd}) => {
         }
     }
   return (
-    <div className='counter' >
-        <div className='controls' >
-            <button className='button' onClick={decrement} >-</button>
-            <h4 className='number' >{quantity}</h4>
-            <button className='button' onClick={increment} >+</button>
-        </div>
-        <div>
-            <button className='button' onClick={() => onAdd(quantity)} disabled = {!stock} >Add to cart</button>
-        </div>
+    <div className='center'>
+        <div className='counter' >
+        
+        <button className='button' onClick={decrement} ><p>-</p></button>
+        <h4 className='number' >{quantity}</h4>
+        <button className='button' onClick={increment} ><p>+</p></button>
+    
+    
+</div>
     </div>
+    
   )
 }
 
-export default ItemCount

@@ -1,9 +1,13 @@
 import NavBar from "./components/NavBar/NavBar";
 import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import AboutUs from "./components/Pages/AboutUs";
+
 import Home from "./components/Pages/Home";
 import Products from "./components/Pages/Products";
+import AboutUsPages from "./components/Pages/AboutUsPages";
+
+import ProductsDetails from "./components/ProductsDetails/ProductsDetails";
+
 
 
 
@@ -20,8 +24,8 @@ return (
   <Routes>
   <Route path='/' element={<Home/>} />
     <Route path='/products' element={<Products/>} />
-    
-    <Route path='/aboutus' element={<AboutUs/>} />
+   <Route path="/products/:id" element={<ProductsDetails/>}/>
+    <Route path='/aboutus' element={<AboutUsPages/>} />
 
   </Routes>
   </BrowserRouter>
@@ -37,3 +41,4 @@ return (
 
 
 export default App;
+
