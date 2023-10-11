@@ -22,12 +22,13 @@ const ModalList = ({isOpen, onClose, name, price, description, stock, img, id}) 
         <p className='info-description'> {description} </p>
         <p className='info-price' >Price: $ {price} </p>
         <p className='info-stock'>Available Stock: {stock} </p>
-        <ItemCount initial={1} stock={stock} onAdd={quantity => console.log('cantidad agregada', quantity)}/>
+      
         <footer className='footer-modal'>
             <button className='close-button-footer' onClick={onClose} >Close</button>
            <Link to={`/products/${id}`} >
            <button className='comprar-button-footer' onClick={onClose} >Buy</button>
            </Link> 
+           
             
         </footer>
       </div> 

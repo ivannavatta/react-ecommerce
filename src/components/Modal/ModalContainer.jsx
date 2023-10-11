@@ -10,6 +10,7 @@ const ModalContainer = ({isOpen, onClose, id}) => {
         .then((res) => {
             if (res !== null) {
               setModal(res);
+              
             } else {
               console.log('Producto no encontrado');
             }
@@ -17,9 +18,10 @@ const ModalContainer = ({isOpen, onClose, id}) => {
         .catch(err => console.log(err))
         
     }, [])
+    
   return (
     
-    <div>{modal && <ModalList isOpen={isOpen} onClose={onClose}  {...modal} />}</div>
+    <div> <ModalList isOpen={isOpen} onClose={onClose}  {...modal} /></div>
   )
 }
 

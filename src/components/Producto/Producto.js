@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import '../steelheets/Producto.css';
 import ModalContainer from '../Modal/ModalContainer';
 import plus from './asset/icons8-plus (1).svg'
-import { Link } from 'react-router-dom';
-import { products } from '../Products/Products';
-import ProductsDetails from '../ProductsDetails/ProductsDetails';
+
 
 
 const Producto = ({ id, name, img, price, stock }) => {
@@ -23,7 +21,7 @@ const Producto = ({ id, name, img, price, stock }) => {
 
     const handleClick = () => {
         setIsClicked(true);
-        setTimeout(() => setIsClicked(false), 1000); // Restablece el estado después de 1 segundo
+        setTimeout(() => setIsClicked(false), 1000); 
         setTimeout(() =>  openModal(), 500)
        
     }

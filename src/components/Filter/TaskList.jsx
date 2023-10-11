@@ -13,12 +13,7 @@ const TaskList = ({ data }) => {
     data.map(products => 
       
       <Producto key={products.id}{...products} />
-     
-      
-      
-     
-      
-    
+
     )
     :
    

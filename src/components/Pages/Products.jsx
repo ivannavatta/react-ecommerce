@@ -19,7 +19,7 @@ const Products = () => {
    
     <ProductosContainer/>
       <ModalContainer/> 
-     <ProductsDetailsContainer/>
+
      
      
     

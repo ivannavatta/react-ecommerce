@@ -7,6 +7,7 @@ import Products from "./components/Pages/Products";
 import AboutUsPages from "./components/Pages/AboutUsPages";
 
 import ProductsDetails from "./components/ProductsDetails/ProductsDetails";
+import ProductsDetailsContainer from "./components/ProductsDetails/ProductsDetailsContainer";
 
 
 
@@ -24,7 +25,7 @@ return (
   <Routes>
   <Route path='/' element={<Home/>} />
     <Route path='/products' element={<Products/>} />
-   <Route path="/products/:id" element={<ProductsDetails/>}/>
+   <Route path="/products/:id" element={<ProductsDetailsContainer/>}/>
     <Route path='/aboutus' element={<AboutUsPages/>} />
 
   </Routes>

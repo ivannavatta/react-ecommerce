@@ -12,9 +12,9 @@
   border: #6a6a6a 1px solid;
   border-radius: 3rem;
   overflow: hidden;
-  width: 120px;
+  width: 190px;
   height: 40px;
-  
+  margin-top: 1rem;
   
   }
  
@@ -22,7 +22,7 @@
    
     background: transparent;
     color: #6a6a6a;
-    margin: 0 20px;
+    margin: 0 50px;
     
     
   }
