@@ -1,6 +1,9 @@
 .list-group{
+    padding: 30px 14% 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    text-align: center;
    
     
 }

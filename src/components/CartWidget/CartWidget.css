@@ -1,3 +1,16 @@
-.img-cart{
+.img-cart, .img-menu{
    font-size: 2rem;
+}
+
+.img-menu{
+   z-index: 100001;
+   cursor: pointer;
+   display: none;
+   transition: transform 0.3s ease;
+}
+.Sign-Up i{
+   transition: all .5s ease;
+}
+.Sign-Up i:hover{
+   transform: scale(1.1);
 }

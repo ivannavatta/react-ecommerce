@@ -1,0 +1,44 @@
+.container{
+    padding: 30px 14% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    text-align: center;
+}
+.container-box{
+    padding: 43px;
+    background-color: #212121;
+    border-radius: 3rem;
+}
+
+.container-box img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+.container-box h3{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 16px 0;
+    color: #fff;
+}
+.container-box a{
+    color: #9e9e9e;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.container-box a:hover{
+    color: rgb(231, 63, 119) ;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        justify-content: center;
+        
+    }
+    .container-box{
+        margin: 20px;
+    }
+}

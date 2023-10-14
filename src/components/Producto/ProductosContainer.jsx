@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 import { getData } from '../Products/Products'
 import '../steelheets/Filter.css'
 import TaskList from '../Filter/TaskList';
 import Filter from '../Filter/Filter';
 import Spinner from '../Spinner/Spinner';
+import 'rc-slider/assets/index.css'; // Importa los estilos de rc-slider
+import Slider from 'rc-slider';
 const ProductosContainer = () => {
   const [data, setData] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
+
   
   useEffect(() => {
     getData()
@@ -16,6 +19,7 @@ const ProductosContainer = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
 
   return (
     <>
@@ -37,6 +41,7 @@ const ProductosContainer = () => {
                 <option value="amazon">Amazfit</option>
                 
               </select> 
+
     
               <TaskList
                 data={
@@ -49,7 +54,9 @@ const ProductosContainer = () => {
                           ?  data.category === "apple"
                           : filterState === "amazon"
                           ? data.category === "amazon"
-                          : data.color === 'white'
+                          :filterState === "amazfit"
+                          ? data.category === "amazfit"
+                          : ''
                       )
                 }
               />

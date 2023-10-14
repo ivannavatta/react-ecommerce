@@ -25,7 +25,7 @@ export const products = [
         price : 300,
         category: 'samsung',
         color: '#ffffff',
-        img: '../img/galaxy watch.avif',
+        img: '../img/galaxy watch.png',
         stock: 13,
         description: 'El Galaxy Watch 6 es un reloj inteligente versátil que ofrece seguimiento de la salud, productividad y entretenimiento. Equipado con el sensor BioActive.',
         day: 'Saturday',

@@ -18,7 +18,7 @@
 
 .div-container {
     position: relative;
-    background: #fff;
+    background: #111;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -26,7 +26,7 @@
     width: 450px;
    height: 550px;
    word-wrap: break-word;
-   
+   color: #fff;
 }
 
  
@@ -43,7 +43,7 @@
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-    color: #333; 
+    color: #fff; 
     z-index: 1;
 }
 .close-button:hover{

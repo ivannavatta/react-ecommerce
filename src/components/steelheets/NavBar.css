@@ -4,7 +4,7 @@
 .navbar {
     background: transparent;
    
-    color: #000;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,13 +27,15 @@
 
 .nav-links a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold;
 }
 
 .nav-links a:hover {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #fff;
 }
+
+
 
 .Sign-Up{
     display: flex;
@@ -46,14 +48,16 @@
 
 .Sign-Up  a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold;
 }
 
 .Sign-Up a:hover{
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #fff;
 }
 .logo{
     width: 200px;
     
 }
+
+

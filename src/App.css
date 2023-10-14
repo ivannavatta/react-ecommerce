@@ -8,5 +8,66 @@
 
 body {
   font-family: 'Prompt', sans-serif;
+  background-color: #111;
+}
+
+
+
+@media screen and (max-width: 850px) {
+  .navbar{
+    padding: 10px;
+  }
+  .Sign-Up ul {
+    display: none;
+  }
+  .nav-links {
+    position: absolute;
+    left: 0;
+    right: 0; 
+    display: none;
+    top: -100%;
+    display: flex;
+    flex-direction: column;
+    background: #212121;
+    text-align: left;
+    transition: all 0.5s ease; 
+    
+  }
+
+  .img-menu {
+    display: block; 
+  }
+  .nav-links.open {
+    top: 60px;
+    display: block;
+    z-index: 1000;
+  }
+  .nav-links a{
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-left:2px solid #e73f77 ;
+  }
+  .nav-links a:hover{
+    border-bottom: none;
+    color: #e73f77;
+  }
+  .img-cart.open{
+    display: none;
+  }
+  
+  
+}
+
+@media screen and (max-width: 320px) {
+  .img-cart{
+    display: none;
+  }
+  .img-cart.open{
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-left:2px solid #e73f77 ;
+  }
 }
 

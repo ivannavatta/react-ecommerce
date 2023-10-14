@@ -1,5 +1,5 @@
 import React from 'react'
-import infinite from './Infinity-2.4s-200px.svg'
+import infinite from './Infinity-2.4s-200px.png'
 const Spinner = () => {
   return (
     <div style={{

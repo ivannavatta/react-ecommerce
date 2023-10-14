@@ -1,6 +1,8 @@
 .title-products{
     text-align: center;
     padding-bottom: 3rem;
+    color: #fff;
+   
     
 }
 
@@ -18,7 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #dddada69;
+    background-color: #222;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     border-radius: 12px;
@@ -31,7 +33,7 @@
     transition: border-color 0.3s; 
   }
   .card-container:hover{
-    border-color: #000;
+    border-color: #fff;
   }
   
   .header {
@@ -42,7 +44,7 @@
   
   .item-name {
     font-size: 24px;
-    color: #333;
+    color: #fff;
     white-space: nowrap;
   }
   
@@ -54,7 +56,7 @@
   
   .info {
     font-size: 16px;
-    color: #777;
+    color: #fff;
     margin-bottom: 10px;
   }
   

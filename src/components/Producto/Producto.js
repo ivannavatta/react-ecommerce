@@ -35,10 +35,10 @@ const Producto = ({ id, name, img, price, stock }) => {
           <h2 className='item-name'>{name}</h2>
         </header>
         <img src={img} alt={name} className='item-img' />
-        <section>
+        <div>
           <p className='info'>Price: ${price}</p>
           <p className='info'>Available stock: {stock}</p>
-        </section>
+        </div>
         <footer>
          
          <button className={`btn-viewDetails ${isClicked ? 'clicked' : ''}`}  onClick={handleClick}> <span className='text' >View details</span>
