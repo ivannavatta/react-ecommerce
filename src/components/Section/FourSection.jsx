@@ -1,6 +1,6 @@
 import React from 'react'
 import '../steelheets/FourSection.css'
-import { BiHeart } from "react-icons/bi";
+import { BiHeart, BiUpArrowAlt } from "react-icons/bi";
 import { BiPlay } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import { products } from '../Products/Products';
@@ -46,9 +46,35 @@ const FourSection = () => {
     <div className="row-btn">
         <Link className='btn' to={'/products'}>All Products<i><BiPlay/></i></Link>
     </div>
+    <a href="#" className='arrow-home' style={styles.arrow}><i style={styles.i}><BiUpArrowAlt/></i></a>
     
    </section>
   )
 }
 
 export default FourSection
+
+const styles = {
+    arrow: {
+      
+        position: 'fixed',
+        bottom: '2.2rem',
+        borderTop: '2rem',
+        right: '3.2rem',
+      },
+  
+      i: {
+        fontSize: '22px',
+        backgroundColor: 'rgb(231, 63, 119)',
+        padding: '10px',
+        borderRadius: '2rem',
+        color: '#111',
+        transition: 'transform 0.3s', 
+    
+        'i:hover': {
+          transform: 'scale(1.1)', 
+        },
+      },
+      
+      
+    }

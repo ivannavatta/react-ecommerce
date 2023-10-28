@@ -4,11 +4,15 @@ import '../steelheets/ProductsDetails.css'
 import gift from './assets/gift.png'
 import { CartContext } from '../../Context/CartContext'
 
-const ProductsDetails = ({ name, price, img, stock, day, specification, id }) => {
+const ProductsDetails = ({ name, price, img, stock, day, specification, id, amount }) => {
     const [discountCode, setDiscountCode] = useState('');
   const [appliedDiscount, setAppliedDiscount] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const {addItemToCart} = useContext(CartContext)
+
+
+
+  
 
   // Función para manejar el cambio en el campo de entrada de código de descuento
   const handleDiscountCodeChange = (event) => {
@@ -67,13 +71,25 @@ const ProductsDetails = ({ name, price, img, stock, day, specification, id }) =>
         <p className="price-details"> ${appliedDiscount !== null ? appliedDiscount : price}</p>
            <h3><b style={{color: 'green'}}>Arrives Free </b> {day}</h3>
            <p className="stock-details">Stock: {stock} units</p>
-          <ItemCount initial={1} stock={stock} onAdd={quantity => console.log('Cantidad agregada:', quantity)} />
+          <ItemCount initial={1} stock={stock}  />
           <h3 ><b>Available </b></h3>
           <input id='descuento' type='text' placeholder='Codigo de descuento' value={discountCode}
         onChange={handleDiscountCodeChange} className='descuento-details'/>
           <button className="dicount-button" onClick={applyDiscountCode}>
             Apply Discount</button>
-          <button className="buy-button" onClick={() => addItemToCart(name, id, price, img, stock)}>Buy Now</button>
+            
+          <button className="buy-button" onClick={() => {
+            const product = {
+              name,
+              id,
+              price,
+              img,
+              stock,
+              amount
+            };
+            addItemToCart(product);
+            console.log('Producto añadido al carrito:', product);
+          }}>Buy Now</button>
          
         </div>
       </div>

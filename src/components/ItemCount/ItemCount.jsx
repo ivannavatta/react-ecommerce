@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../steelheets/ItemCount.css'
 export const ItemCount = ({ stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(initial)
+    
 
     const increment = () => {
         if (quantity < stock) {
@@ -21,9 +22,11 @@ export const ItemCount = ({ stock, initial, onAdd}) => {
         <button className='button' onClick={decrement} ><p>-</p></button>
         <h4 className='number' >{quantity}</h4>
         <button className='button' onClick={increment} ><p>+</p></button>
+        
     
     
 </div>
+
     </div>
     
   )

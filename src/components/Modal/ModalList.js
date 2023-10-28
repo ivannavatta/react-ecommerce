@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {ItemCount} from '../ItemCount/ItemCount'
 import '../steelheets/Modal.css'
 import { Link } from 'react-router-dom'
 

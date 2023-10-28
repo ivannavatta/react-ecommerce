@@ -59,5 +59,49 @@
     width: 200px;
     
 }
+.user-form{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.dropdown {
+    min-width: 130px;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 40px; 
+    right: 45px;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 50px -12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    
+  }
+.dropdown .sign-out{
+    color: red;
+}
 
+.dropdown a:hover{
+    border-bottom: none;
+    cursor: pointer;
+}
+li:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    top: 60px;
+}
+.nombre{
+    padding-right: 1rem;
+    font-size: 17px;
+}
 
+@media screen and (max-width: 450px) {
+    .nombre{
+        font-size: .7rem;
+        margin-left: 3rem;
+    }
+}

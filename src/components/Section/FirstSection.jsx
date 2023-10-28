@@ -17,7 +17,7 @@ return (
         
     <Link className='btn' to={'/products'}>Explore Products <i><BiPlay/></i> </Link>
     
-    <a href="" className='btn2'>Sign Up Now</a>
+   
     </div>
     </div>
     <div className="home-img">

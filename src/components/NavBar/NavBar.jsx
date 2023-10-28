@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 
 import '../steelheets/NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
@@ -6,8 +6,27 @@ import Logo from './assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
 import { BiMenuAltRight, BiSolidShoppingBag } from 'react-icons/bi'
 import { BiX } from 'react-icons/bi'
+import FormList from '../Form/FormList'
+import { BiUserCircle } from 'react-icons/bi'
+import Cart from '../Cart/Cart'
+
+
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [name, setName] = useState('');
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto'
+  };
  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -33,18 +52,33 @@ const NavBar = () => {
       <li><Link to={'/'} onClick={closeMenu}>Home</Link> </li>
       <li><Link to={'/products'} onClick={closeMenu}>Products</Link> </li>
       <li><Link to={'/aboutus'} onClick={closeMenu}>AboutUs</Link> </li>
-      {isMenuOpen ? <li onClick={closeMenu}><a href="/">Sign Up</a></li> : ''}
+      {isMenuOpen ? <li onClick={closeMenu}><a onClick={openModal}>Sign Up</a></li> : ''}
       {isMenuOpen ? <i className={`img-cart ${isMenuOpen ? 'open' : ''}`}><BiSolidShoppingBag/></i> : ''}
       </ul>
+      {formSubmitted ? <p className='nombre'>Hi !{name}</p> : ''}
+
+
       <div className='Sign-Up'>
       <ul >
-        <li><a href="/">Sign Up</a></li>
+        <li>{formSubmitted ?
+        <>
+         <li><i className='user-form'><BiUserCircle/></i>
+        <div className='dropdown'>
+          <a className='sign-out' onClick={() => setFormSubmitted(false)}>Sign Out</a>
+          <a >Your Orders</a>
+        </div>
+        </li> 
+        </>
+        :
+        <a  onClick={openModal}> Sign Up </a>}
+        </li>
         
       </ul>
 
-      <CartWidget display={isMenuOpen && window.innerWidth >= 820 ? 'block' : 'none'} />
+      <Cart />
       <i className={`img-menu ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>{!isMenuOpen ? <BiMenuAltRight/> : <BiX/>}</i>
       </div>
+      <FormList isOpen={isModalOpen} onClose={closeModal} setFormSubmitted={setFormSubmitted} formSubmitted={formSubmitted}  updateName={setName} />
        
       
     </nav>

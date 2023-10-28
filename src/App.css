@@ -60,14 +60,8 @@ body {
 }
 
 @media screen and (max-width: 320px) {
-  .img-cart{
-    display: none;
-  }
-  .img-cart.open{
-    display: block;
-    padding: 0.5rem;
-    margin: 1rem;
-    border-left:2px solid #e73f77 ;
-  }
+ .logo{
+  width: 60%;
+ }
 }
 

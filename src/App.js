@@ -7,6 +7,7 @@ import AboutUsPages from "./components/Pages/AboutUsPages";
 import ProductsDetails from "./components/ProductsDetails/ProductsDetails";
 import ProductsDetailsContainer from "./components/ProductsDetails/ProductsDetailsContainer";
 import { CartProvider } from "./Context/CartContext";
+import CartDetails from "./components/CartDetails/CartDetails";
 
 
 
@@ -21,14 +22,15 @@ return (
 
 
   <BrowserRouter>
-  
-  <NavBar/>
   <CartProvider>
+  <NavBar/>
+  
   <Routes>
     
   <Route path='/' element={<Home/>} />
     <Route path='/products' element={<Products/>} />
    <Route path="/products/:id" element={<ProductsDetailsContainer/>}/>
+   <Route path="/cart" element={<CartDetails/>}/>
     <Route path='/aboutus' element={<AboutUsPages/>} />
 
   </Routes>

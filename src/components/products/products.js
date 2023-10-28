@@ -16,7 +16,8 @@ export const products = [
             'Comprehensive health monitoring: heart rate, sleep, blood oxygen, and more.',
             '270mAh battery with a battery life of up to 15 days.',
             'Compatible with Android 7.0 and iOS 12.0, includes a charger.'
-        ]
+        ],
+      amount: 0
 
     },
     {
@@ -37,7 +38,8 @@ export const products = [
             '80-hour battery life and fast charging capabilities.',
             'Connectivity options include Bluetooth and Wi-Fi.',
             'Supports audio playback.'
-        ]
+        ],
+      amount: 0
 
     },
     {
@@ -56,7 +58,8 @@ export const products = [
             'Health monitoring: heart rate, sleep, oxygen, and more.',
             '270mAh battery with a lifespan of up to 15 days.',
             'Compatible with Android 7.0 and iOS 12.0, includes charger.'
-        ]
+        ],
+      amount: 0
 
     },
     {
@@ -75,7 +78,8 @@ export const products = [
             '80-hour battery life and fast charging.',
             'Bluetooth and Wi-Fi connectivity.',
             'Audio playback capability.'
-        ]
+        ],
+      amount: 0
 
     },
     {
@@ -94,7 +98,8 @@ export const products = [
             'S9 SiP, Double tap gesture, Faster on-device Siri with health data access, Precision Finding for iPhone',
             'Up to 36 hours, Up to 72 hours in Low Power Mode, Fast charging',
             'Temperature sensing, Cycle Tracking with retrospective ovulation estimates'
-          ]
+          ],
+          amount: 0
 
     },
     {
@@ -112,7 +117,8 @@ export const products = [
             'Integrated GPS and Bluetooth for seamless connectivity.',
             'Comprehensive health tracking: heart rate, sleep, blood oxygen, and more.',
             'Long-lasting 270mAh battery with up to 15 days of battery life.',
-            'Compatible with Android 7.0 and iOS 12.0, includes a charger.']
+            'Compatible with Android 7.0 and iOS 12.0, includes a charger.'],
+          amount: 0
 
     },
     {
@@ -131,7 +137,8 @@ export const products = [
             'Comprehensive health monitoring: heart rate, sleep, blood oxygen, and more.',
             'Impressive 430mAh battery with up to 12 days of battery life.',
             'Compatible with Android 7.0, charging cable included.'
-        ]
+        ],
+      amount: 0
 
     },
     {
@@ -148,7 +155,8 @@ export const products = [
             'Water-resistant up to 100 meters, ideal for swimming and rainy days.',
             'Built-in GPS and Bluetooth for seamless connectivity.',
             'Comprehensive health monitoring: heart rate, sleep, blood oxygen, and more.',
-            'Impressive 430mAh battery with up to 12']
+            'Impressive 430mAh battery with up to 12'],
+          amount: 0
 
     }
 ]

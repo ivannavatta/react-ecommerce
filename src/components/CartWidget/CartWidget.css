@@ -14,3 +14,35 @@
 .Sign-Up i:hover{
    transform: scale(1.1);
 }
+.counter-products{
+   height: 20px;
+      width: 20px;
+      border-radius: 999px;
+      position: absolute;
+      top: 25px;
+      right: 10px;
+      background-color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+   .counter-products{
+      right: 40px;
+      top: 12px;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .img-cart{
+      position: absolute;
+      right: 10px;
+   }
+   .counter-products{
+      right: 50px;
+   }
+}

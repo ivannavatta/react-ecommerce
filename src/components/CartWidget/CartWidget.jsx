@@ -9,6 +9,7 @@ const CartWidget = () => {
   return (
    <>
      <i className='img-cart'><BiSolidShoppingBag/></i>
+     
       
      
    </>
