@@ -3,11 +3,13 @@ import '../steelheets/Form.css';
 import { BiEnvelope } from 'react-icons/bi';
 import { BiLock } from 'react-icons/bi';
 import { BiUserCircle } from 'react-icons/bi'
-const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName }) => {
-  const [nombre, setNombre] = useState('');
-  const [email, setEmail] = useState('');
+import { BiPhone } from 'react-icons/bi'
+
+const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName, email, setEmail, nombre, setNombre, phone, setPhone }) => {
+  
   const [password, setPassword] = useState('');
   const [nombreError, setNombreError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
@@ -17,9 +19,10 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
   useEffect(() => {
     if (!formSubmitted) {
       // Restablecer los estados y errores del formulario
-      setNombre('');
-      setEmail('');
+      
+      
       setPassword('');
+      setPhoneError('')
       setNombreError('');
       setEmailError('');
       setPasswordError('');
@@ -30,6 +33,9 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
 
   const handleNombreChange = (e) => {
     setNombre(e.target.value);
+  };
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
   };
 
   const handleEmailChange = (e) => {
@@ -62,6 +68,12 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
     } else {
       setNombreError('');
     }
+    if (!phone) {
+      setPhoneError('El numero es obligatorio');
+      formValid = false;
+    } else {
+      setPhoneError('');
+    }
   
     if (lettersBeforeAt < 3 || lettersAfterAt < 3) {
       setEmailError('El correo electrónico debe tener el "@"');
@@ -78,6 +90,7 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
     // Si el formulario es válido, puedes enviarlo o realizar otras acciones
     if (formValid) {
       updateName(nombre);
+      
       console.log('Formulario enviado');
       // Cerrar el formulario y mostrar la imagen
       onClose();
@@ -108,7 +121,7 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
                 onChange={handleNombreChange}
                 placeholder="Enter Your Name"
               />
-              <i className="icon-email">
+              <i className="icon-user">
                 <BiUserCircle />
               </i>
             </div>
@@ -134,7 +147,7 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
           </div>
           {emailError && <p className="error-message">{emailError}</p>}
 
-          <div className="flex-input-container">
+          <div className="flex-input-container-text">
             <label htmlFor="password" className="label">
               Password
             </label>
@@ -153,6 +166,24 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
             
           </div>
           {passwordError && <p className="error-message">{passwordError}</p>}
+
+          <div className="flex-input-container">
+            <label htmlFor="phone" className="label">
+              Phone
+            </label>
+            <div className="input">
+              <input
+                type="text"
+                onChange={handlePhoneChange}
+                placeholder="Enter Your Phone Number"
+              />
+              <i className="icon-phone">
+                <BiPhone />
+              </i>
+            </div>
+            
+          </div>
+          {phoneError && <p className="error-message">{phoneError}</p>}
         </div>
 
         <footer className="footer-modal-form">

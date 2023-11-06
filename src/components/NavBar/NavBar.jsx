@@ -12,11 +12,12 @@ import Cart from '../Cart/Cart'
 
 
 
-const NavBar = () => {
+const NavBar = ({ email, setEmail, nombre, setNombre, phone, setPhone }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [name, setName] = useState('');
+  
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -78,7 +79,7 @@ const NavBar = () => {
       <Cart />
       <i className={`img-menu ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>{!isMenuOpen ? <BiMenuAltRight/> : <BiX/>}</i>
       </div>
-      <FormList isOpen={isModalOpen} onClose={closeModal} setFormSubmitted={setFormSubmitted} formSubmitted={formSubmitted}  updateName={setName} />
+      <FormList isOpen={isModalOpen} onClose={closeModal} setFormSubmitted={setFormSubmitted} formSubmitted={formSubmitted}  updateName={setName}  email={email} setEmail={setEmail} nombre={nombre} setNombre={setNombre} phone={phone} setPhone={setPhone}/>
        
       
     </nav>

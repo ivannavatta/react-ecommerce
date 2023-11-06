@@ -58,13 +58,19 @@ const ProductosContainer = () => {
                           ? data.category === "amazfit"
                           : ''
                       )
+                     
                 }
+                
               />
+              {console.log('filterState', filterState)}
+               
             </>
+          
           )}
         </Filter>
       )}
       {!dataLoaded && <Spinner />}
+      
     </>
   );
 };

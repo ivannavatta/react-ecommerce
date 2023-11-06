@@ -99,6 +99,7 @@ li:hover .dropdown{
     font-size: 17px;
 }
 
+
 @media screen and (max-width: 450px) {
     .nombre{
         font-size: .7rem;

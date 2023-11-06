@@ -1,15 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../../Context/CartContext';
 import './CartDetails.css';
 
 import TablaResumen from './Tabla';
 import ShoppingCart from './Tabla';
 import { Link } from 'react-router-dom';
+import gift from './assets/gift.png'
 
 
-
-const CartDetails = () => {
+const CartDetails = ({ email, nombre, phone }) => {
   const { cart } = useContext(CartContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
+  
+
 
   return (
    <>
@@ -84,7 +97,22 @@ const CartDetails = () => {
         </tbody>
       </table>
     </div>
-     <ShoppingCart/>
+     <ShoppingCart email={email} nombre={nombre} phone={phone}/>
+     <div
+        className="circle-button"
+        onClick={isModalOpen ? closeModal : openModal}
+      >
+        <img src={gift} alt="gift" className='gift' />
+      </div>
+
+      {/* Modal de mini tarjeta */}
+      <div className={`mini-card-modal ${isModalOpen ? 'active' : ''}`}>
+        <span onClick={closeModal} className="close-mini-card-modal">
+          &times;
+        </span>
+        <h2>Gift</h2>
+        <p>Congratulations the discount code is: "Discount".</p>
+      </div>
 </div>
     )
   : (

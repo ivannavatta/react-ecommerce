@@ -1,3 +1,6 @@
+import { doc, getDoc, getFirestore } from "firebase/firestore"
+import { BiSolidZoomOut } from "react-icons/bi"
+
 export const products = [
     {
         id: 1,
@@ -169,15 +172,22 @@ export const getData = () =>{
     })
 } 
 
-export const getIdData = (productsId) =>{
-    return new Promise((resolve) => {
-        
-            const product = products.find(prod => prod.id === parseInt(productsId))
-            resolve(product || null)
+export const getIdData = async (id) => {
+  try {
+    const db = getFirestore();
+    const itemRef = doc(db, 'items', id);
+    const itemSnap = await getDoc(itemRef);
 
-       
-    })
-}
+    if (itemSnap.exists()) {
+      const itemData = itemSnap.data();
+      return itemData;
+    } else {
+      console.log('Documento no encontrado');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error al obtener los datos:', error);
+    throw error;
+  }
+};
 
-
-    

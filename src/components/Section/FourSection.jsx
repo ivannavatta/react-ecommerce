@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../steelheets/FourSection.css'
 import { BiHeart, BiUpArrowAlt } from "react-icons/bi";
 import { BiPlay } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import { products } from '../Products/Products';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 const FourSection = () => {
+    const [data, setData] = useState([])
+    useEffect(() => {
+        const db = getFirestore()
+        const itemRef = collection(db, 'items')
+        getDocs(itemRef). 
+        then(res => setData(res.docs.map(doc => ({ id: doc.id, ...doc.data()})
+        ))
+        )
+      }, [])
     
   return (
    <section className='shop'>
@@ -15,7 +25,7 @@ const FourSection = () => {
     </div>
     <div className="shop-content ">
        {
-        products.slice(3, 6).map(product => (
+        data.slice(3, 6).map(product => (
             <>
             <div className='row'>
                 <img src={product.img}/>
