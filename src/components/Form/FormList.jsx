@@ -95,6 +95,7 @@ const FormList = ({ isOpen, onClose, setFormSubmitted, formSubmitted, updateName
       // Cerrar el formulario y mostrar la imagen
       onClose();
       setFormSubmitted(true);
+      
     }
   };
 

@@ -31,23 +31,34 @@ const applyDiscountCode = () => {
 
 const ordersCollection = collection(db, 'orders');
 const createOrder = () => {
-  
-  const total = cart.reduce((prev, current) => prev + current.price, 0)
-  const orderData = {
-    buyer: {
-      name: nombre,
-      phone: phone,
-      email: email
+  if (email && nombre && phone) {
+      const total = cart.reduce((prev, current) => prev + current.price, 0);
+      const orderData = {
+        buyer: {
+          name: nombre,
+          phone: phone,
+          email: email
+        },
+        items: [...cart],
+        total: total
+      };
 
-    },
-    items: [...cart],
-    total: total
+      addDoc(ordersCollection, orderData)
+        .then(({ id }) => setOrder(id))
+        .catch((error) => {
+          // Manejar errores, si es necesario
+          console.error("Error al crear la orden:", error);
+        });
+
+      console.log(order);
+    
+  } else {
+    
+    console.log("Debe iniciar sesión para realizar la compra.");
+
   }
-  
-addDoc(ordersCollection, orderData).then(({ id }) => setOrder(id));
+};
 
-console.log(order);
-}
 
 
 
@@ -98,8 +109,10 @@ console.log(order);
           <button  className='button-buy' onClick={createOrder}>Comprar</button>
           </div>
           {order && <h1>ID de la orden: {order}</h1>}
+          {!email && !nombre && !phone && <h1>Debe iniciar sesión para realizar la compra.</h1>}
           {console.log('name:',nombre)}
           {console.log('email:',email)}
+          {console.log('totsl:',total)}
         
         
     </div>

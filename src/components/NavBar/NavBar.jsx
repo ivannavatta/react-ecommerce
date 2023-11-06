@@ -45,6 +45,13 @@ const NavBar = ({ email, setEmail, nombre, setNombre, phone, setPhone }) => {
  const closeMenu = () => {
   setIsMenuOpen(false)
  }
+
+ const resetForm = () => {
+  setEmail('')
+  setNombre('')
+  setPhone('')
+  setFormSubmitted(false)
+ }
   return (
     <>
     <nav className='navbar'  >
@@ -65,7 +72,7 @@ const NavBar = ({ email, setEmail, nombre, setNombre, phone, setPhone }) => {
         <>
          <li><i className='user-form'><BiUserCircle/></i>
         <div className='dropdown'>
-          <a className='sign-out' onClick={() => setFormSubmitted(false)}>Sign Out</a>
+          <a className='sign-out' onClick={resetForm}>Sign Out</a>
           <a >Your Orders</a>
         </div>
         </li> 
